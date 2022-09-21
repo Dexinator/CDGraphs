@@ -1,0 +1,2 @@
+querys
+SELECT referencia, COUNT(CASE WHEN sexo = 'H' then 1 END) as 'Hombres',COUNT(CASE WHEN sexo = 'M' then 1 END) as 'Mujeres',COUNT(CASE WHEN sexo != '' then 1 END) as 'Total' FROM `survey` GROUP BY referencia ORDER BY `Total`  DESC;
